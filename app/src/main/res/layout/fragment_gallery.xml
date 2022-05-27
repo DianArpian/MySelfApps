@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainPrimary"
+    tools:context=".Fragment.Gallery">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/nunito_sans_regular"
+            android:text="Video"
+            android:textColor="@color/colorYellow"
+            android:textSize="20dp" />
+
+        <FrameLayout
+            android:id="@+id/frame_layout_video"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_below="@id/txtVideo"
+            android:layout_height="250dp">
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frame_layout_video"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/nunito_sans_regular"
+            android:text="Photo"
+            android:textColor="@color/colorYellow"
+            android:textSize="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rViewPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPhoto"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/txtMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rViewPhoto"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/nunito_sans_regular"
+            android:text="Music"
+            android:textColor="@color/colorYellow"
+            android:textSize="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rViewMusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMusic"
+            android:layout_marginTop="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rViewVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMusic"
+            android:layout_marginTop="20dp" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/mainPrimary"
+    tools:context=".Fragment.Home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/img_profile" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_profile"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:text="Dian Arpian"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/nim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:text="10119916"
+            android:textAlignment="center"
+            android:textColor="@color/colorGray"
+            android:textSize="18sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/nim"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bg_layout">
+
+            <TextView
+                android:id="@+id/Desc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/nunito_sans_light"
+                android:text="Umur :"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/Desc2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Desc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_light"
+                android:text="Pekerjaan :"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/Desc3"
+                app:layout_constraintStart_toStartOf="@id/Desc1"
+                app:layout_constraintTop_toBottomOf="@id/Desc1" />
+
+            <TextView
+                android:id="@+id/Desc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_light"
+                android:text="Status :"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/Desc1"
+                app:layout_constraintTop_toBottomOf="@id/Desc2" />
+
+            <TextView
+                android:id="@+id/ans1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:fontFamily="@font/nunito_sans_light"
+                android:text="23 Tahun"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/ans2"
+                app:layout_constraintStart_toStartOf="@id/Desc1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ans2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_light"
+                android:text="Pelajar"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/ans3"
+                app:layout_constraintStart_toStartOf="@id/ans1"
+                app:layout_constraintTop_toBottomOf="@id/ans1" />
+
+            <TextView
+                android:id="@+id/ans3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_light"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/ans1"
+                app:layout_constraintTop_toBottomOf="@id/ans2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cLayout"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Interest"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/cLayout"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_layout"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/kesukaanLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/makesLayout"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/titleMakes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:text="Makanan Kesukaan"
+                        android:textColor="@color/colorYellow"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/makes1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleMakes"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:text="Bubur Ayam"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/makes2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/makes1"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:text="Ayam Penyet"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/makes3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/makes2"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:text="Soto"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mikesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/titleMikes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:text="Makanan Kesukaan"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorYellow"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/mikes1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleMikes"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:text="Bubur Ayam"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/mikes2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mikes1"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:text="Ayam Penyet"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/mikes3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mikes2"
+                        android:fontFamily="@font/nunito_sans_light"
+                        android:text="Soto"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rViewHobbies"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/kesukaanLayout"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
